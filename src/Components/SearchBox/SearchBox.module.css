@@ -1,0 +1,10 @@
+.searchBoxName {
+  border: 2px solid black; /* Це створить чорний бордер товщиною 2 пікселя */
+  padding: 20px; /* Це додасть внутрішній відступ для форми */
+  border-radius: 8px; /* Це зробить краї бордера заокругленими */
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-top: 40px;
+  gap: 10px;
+}

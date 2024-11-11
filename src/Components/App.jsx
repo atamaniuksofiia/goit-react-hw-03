@@ -11,6 +11,13 @@ const App = () => {
     { id: "id-4", name: "Annie Copeland", number: "227-91-26" },
   ]);
   const [searchQuery, setSearchQuery] = useState("");
+
+  const handleDeleteContact = (id) => {
+    setContacts((prevContacts) =>
+      prevContacts.filter((contact) => contact.id !== id)
+    );
+  };
+
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };
@@ -27,7 +34,10 @@ const App = () => {
       <h1>Phonebook</h1>
       <ContactForm setContacts={setContacts} />
       <SearchBox searchQuery={searchQuery} onChange={handleSearchChange} />
-      <ContactList contacts={filteredContacts} />
+      <ContactList
+        contacts={filteredContacts}
+        onDeleteContact={handleDeleteContact}
+      />
     </div>
   );
 };

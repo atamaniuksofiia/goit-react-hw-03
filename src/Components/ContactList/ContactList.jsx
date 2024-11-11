@@ -1,30 +1,20 @@
 import Contact from "./Contact/Contact";
+import s from "./ContactList.module.css";
 
-const ContactList = ({ contacts }) => {
+const ContactList = ({ contacts, onDeleteContact }) => {
   //   if (!contacts || contacts.length === 0) {
   //     return <p>No contacts available</p>; // Показуємо повідомлення, якщо контактів немає
   //   }
   return (
-    <ul>
-      {contacts.map(({ id, name, number }) => (
-        <li key={id}>
-          <p>{name}</p>
-          <p>{number}</p>
-          <button>Delete</button>
-        </li>
+    <ul className={s.wrapper}>
+      {contacts.map((contact) => (
+        <Contact
+          key={contact.id}
+          {...contact}
+          onDelete={() => onDeleteContact(contact.id)}
+        />
       ))}
     </ul>
-
-    // <ul>
-    //   {contacts.map((contact) => (
-    //     <Contact
-    //       key={contact.id}
-    //       id={contact.id}
-    //       name={contact.name}
-    //       number={contact.number}
-    //     />
-    //   ))}
-    // </ul>
   );
 };
 
