@@ -1,7 +1,7 @@
 .contactForm {
-  border: 2px solid black; /* Це створить чорний бордер товщиною 2 пікселя */
-  padding: 20px; /* Це додасть внутрішній відступ для форми */
-  border-radius: 8px; /* Це зробить краї бордера заокругленими */
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   width: 400px;
@@ -22,5 +22,5 @@
   border-radius: 4px;
 }
 .contactForm label {
-  font-weight: bold; /* Робимо текст мітки жирним (за бажанням) */
+  font-weight: bold;
 }
