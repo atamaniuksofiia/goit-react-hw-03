@@ -1,9 +1,10 @@
 import { Form, Field, Formik } from "formik";
+import s from "./SearchBox.module.css";
 
 const SearchBox = ({ searchQuery, onChange }) => {
   return (
     <Formik>
-      <Form>
+      <Form className={s.searchBoxName}>
         <label htmlFor="search">Find contacts by name</label>
         <Field
           id="search"
